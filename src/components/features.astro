@@ -1,0 +1,72 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const problems = [
+  {
+    title: "Overwhelmed by workload",
+    icon: "ph:x-circle-fill",
+  },
+  {
+    title: "Lack of streamlined processes",
+    icon: "ph:x-circle-fill",
+  },
+  {
+    title: "Difficulty in prioritizing tasks",
+    icon: "ph:x-circle-fill",
+  },
+  {
+    title: "Inefficient communication among team members",
+    icon: "ph:x-circle-fill",
+  },
+  {
+    title: "Struggling to scale operations",
+    icon: "ph:x-circle-fill",
+  },
+  {
+    title: "Limited resources and manpower",
+    icon: "ph:x-circle-fill",
+  },
+  {
+    title: "Managing rapid changes and adaptations",
+    icon: "ph:x-circle-fill",
+  },
+  {
+    title: "Balancing short-term goals with long-term vision",
+    icon: "ph:x-circle-fill",
+  },
+  {
+    title: "Maintaining product quality while scaling",
+    icon: "ph:x-circle-fill",
+  },
+  {
+    title: "Keeping up with customer demands and expectations",
+    icon: "ph:x-circle-fill",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0 mb-16">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+    Are you grappling with the headaches of backlog management?
+  </h2>
+  <p class="text-lg mt-4 text-slate-600 text-center mb-8">
+    It's a common struggle for businesses trying to grow. The constant shuffle of tasks can
+    zap your energy and derail your focus on what really matters. Here's a look
+    at some of the most common problems fast-growing startups encounter – maybe
+    you're experiencing them too:
+  </p>
+  <div class="text-center mb-8">
+  {
+    problems.map((item) => (
+        <div class="flex justify-center items-center text-center text-lg text-slate-600">
+          <Icon class="text-red-500" name={item.icon} />
+          <p>{item.title}</p>
+        </div>
+    ))
+  }
+  </div>
+  <p class="text-lg mt-4 text-slate-600 text-center mb-8">
+    So, this is the main reason we're here to help. Our team brings a wealth of experience working with startups and scale-ups across various industries. Whether it's partnering with one of the biggest banks in Manila, optimizing operations for a data center in Australia, collaborating with a NASDAQ-listed company managing multiple startups, or supporting the growth of a small but rapidly expanding e-commerce venture – we've been there. Our diverse portfolio and proven track record showcase our ability to understand unique challenges and deliver tailored solutions that drive tangible results. With our expertise and dedication, we're committed to empowering you to overcome obstacles and achieve your business goals.
+  </p>
+</div>

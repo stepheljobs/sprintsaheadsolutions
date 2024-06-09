@@ -1,0 +1,33 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/hero.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const currentMonth = new Date().getMonth();
+const monthName = months[currentMonth];
+---
+
+<main
+  class="grid lg:grid-cols-1 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-center">
+      Time-saving backlog management for fast-growing startups.
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-screen-xl text-center">
+      Our mission statement is simple: Keep your backlogs two sprints ahead.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
+      <Link
+        href="#"
+        href="https://form.jotform.com/241597860233057"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+          Free Service Every Month! Claim Your Slot for {monthName} Now! 🎉
+      </Link>
+    </div>
+  </div>
+</main>

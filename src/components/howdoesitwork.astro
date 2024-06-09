@@ -1,0 +1,59 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const steps = [
+  {
+    title: "Initial Coffee Meeting",
+    description:
+      "This is an informal, no-strings-attached call where we get to know each other better. It's an opportunity for us to understand your unique needs, challenges, and aspirations. This meeting allows us to gauge whether our services align well with your goals and provide the desired value.",
+    icon: "bx:bxs-coffee",
+  },
+  {
+    title: "In-depth Product Discussion",
+    description:
+      "We delve deeper into your product, its roadmap, and your overarching business objectives. We aim to fully grasp the direction you're aiming for, ensuring that our strategies align perfectly with your vision. This thorough understanding enables us to create a tailored plan that will contribute to your business's success.",
+    icon: "bx:chat",
+  },
+  {
+    title: "Comprehensive Audit",
+    description:
+      "Based on the insights gleaned from our product discussion, we conduct an extensive audit of your backlogs, regardless of the platform they're on (JIRA, Clickup, Spreadsheet, etc.). The goal is to thoroughly assess your existing processes and identify areas for improvement. You will receive a comprehensive report detailing our findings and the steps we recommend to enhance your backlog management.",
+    icon: "bx:search-alt",
+  },
+  {
+    title: "Strategic Planning",
+    description:
+      "Leveraging the insights gained from the audit, we create a bespoke strategy within 2 to 4 days. This strategy designed to improve your backlog management will focus on streamlining processes, enhancing efficiency, and aligning your product development more closely with your business goals. The result will be a more efficient, effective, and aligned approach to managing your product backlog.",
+    icon: "ph:strategy-fill",
+  },
+  {
+    title: "Putting Plans into Sprints",
+    description:
+      "Once the strategic plan is finalized and approved, our team jumps into action. We roll up our sleeves and begin implementing the agreed-upon strategies to enhance your backlog management. This phase involves hands-on work, including optimizing workflows, implementing new tools or processes, and refining existing practices. Throughout this process, we maintain open communication with your team to ensure that our efforts are aligned with your goals and expectations.",
+    icon: "material-symbols:sprint-rounded",
+  }
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+    How does it work?
+  </h2>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    steps.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
