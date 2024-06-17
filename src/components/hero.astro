@@ -4,7 +4,20 @@ import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 const currentMonth = new Date().getMonth();
 const monthName = months[currentMonth];
 ---
@@ -19,14 +32,28 @@ const monthName = months[currentMonth];
     <p class="text-lg mt-4 text-slate-600 max-w-screen-xl text-center">
       Our mission statement is simple: Keep your backlogs two sprints ahead.
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
+    <div
+      class="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
       <Link
         href="#"
         href="https://calendly.com/sgmaca/sprintsahead-discovery-call"
         target="_blank"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
-          Schedule a Discovery Call
+        Schedule a Discovery Call
+      </Link>
+    </div>
+    <div
+      class="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
+      <Link
+        href="#"
+        href="https://form.jotform.com/241597860233057"
+        target="_blank"
+        style="outline"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        Free Trial! Claim Your Slot for {monthName} Now! 🎉 (Wating
+        List)
       </Link>
     </div>
   </div>
